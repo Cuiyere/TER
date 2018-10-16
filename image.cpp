@@ -29,6 +29,6 @@ Image::~Image() {
 }
 
 Image::SetPixel (int i, int j, std::vector<int> rgbValues) {
-
+// Bonjour je suis le TER de l'ambiance
 }
 
