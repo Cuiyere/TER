@@ -5,13 +5,19 @@
  */
 
 #include<fstream>
+#include<iostream>
+#include<string>
 
 using namespace std;
 
 int main () {
 	const int width = 255, height = 255;
 
-	ofstream img ("picture.ppm");
+	string fileName;
+	system("mkdir -p ./Images");
+	cout << "Entrez le nom du fichier:" << endl;
+	cin >> fileName;
+	ofstream img ("./Images/"+fileName+".ppm");
 	img << "P3" << endl;
 	img << width << " " << height << endl;
 	img << "255" << endl;
@@ -26,6 +32,7 @@ int main () {
 		}
 	}
 
-	system("open picture.ppm");
+	string cmd = "open ./Images/"+fileName+".ppm";
+	system(cmd.c_str());
 	return 0;
 }
