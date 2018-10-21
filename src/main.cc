@@ -10,9 +10,9 @@ using namespace std;
 
 int main () {
 
-	system(("mkdir -p ./Desktop/eclipse-workspace/PicturesTER/Images"));
+	//system(("mkdir -p .//Images"));
 	ofstream flux;
-	string filename = "./Desktop/eclipse-workspace/PicturesTER/Images/picture1.bmp";
+	string filename = "picture.ppm";
 	flux.open(filename, ios::out);
 
 	if (flux) { cout << "Bonjour, je suis une image." << endl; }
