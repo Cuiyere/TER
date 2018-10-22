@@ -35,4 +35,5 @@ int main () {
 	string cmd = "open ./Images/"+fileName+".ppm";
 	system(cmd.c_str());
 	return 0;
+	// Salut 
 }
