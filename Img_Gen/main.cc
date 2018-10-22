@@ -1,9 +1,11 @@
-/*
- - main.c -
- 15.10.2018
- Arthur Bierlaire
+ /* main.c
+ 	Bierlaire Arthur
+	15.10.2018
+
+	Programme principal
  */
 
+#include "function.h"
 #include<fstream>
 #include<iostream>
 #include<string>
@@ -11,30 +13,27 @@
 using namespace std;
 
 int main () {
-	const int width = 255, height = 255;
+	const int width = 1023, height = 1023;
+	const int radius = 250;
 
+	// ------ Création du fichier ------
 	string fileName;
 	system("mkdir -p ./Images");
 	cout << "Entrez le nom du fichier:" << endl;
 	cin >> fileName;
 	ofstream img ("./Images/"+fileName+".ppm");
+
+	// ------ Syntaxe pour un fichier .ppm ------
 	img << "P3" << endl;
 	img << width << " " << height << endl;
 	img << "255" << endl;
 
-	for (int i = 0; i < height; i++) {
-		for (int j = 0; j < width; j++) {
-			int r = i % 255;
-			int g = j % 255;
-			int b = i * j % 255;
+	// ------ Création de l'image ------
+	//DrawGradient (img, height, width); // Uncomment to draw a gradient
+	DrawCircle(img, height, width, radius);
 
-			img << r << " " << g << " " << b << endl;
-		}
-	}
-
+	// ------ Ouverture de l'image -------
 	string cmd = "open ./Images/"+fileName+".ppm";
 	system(cmd.c_str());
 	return 0;
-	// Salut 2
-	// Bite
 }
