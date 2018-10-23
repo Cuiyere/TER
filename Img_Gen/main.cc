@@ -14,7 +14,7 @@ using namespace std;
 
 int main () {
 	const int width = 1023, height = 1023;
-	const int radius = 250;
+	const int radius;
 
 	// ------ Création du fichier ------
 	string fileName;
@@ -29,6 +29,8 @@ int main () {
 	img << "255" << endl;
 
 	// ------ Création de l'image ------
+	cout << "Entrez le rayon du cercle:" << endl;
+	cin >> radius;
 	//DrawGradient (img, height, width); // Uncomment to draw a gradient
 	DrawCircle(img, height, width, radius);
 

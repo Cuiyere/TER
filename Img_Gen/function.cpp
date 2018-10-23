@@ -15,8 +15,9 @@ void DrawCircle (ofstream& img, int height, int width, int radius) {
 
 	for (int i = 0; i < height; i++) {
 		for (int j = 0; j < width; j++) {
-			if (IsInCirle(i, j, radius, (int)height/2, (int)width/2)) img << "255 255 255" << endl;
-			else img << "0 0 0" << endl;
+			//if (IsInCirle(i, j, radius, (int)height/2, (int)width/2)) img << (i+j)%255 << " " << (i+j)%255 << " " << (i+j)%255 << endl;
+			if (IsInCirle(i, j, radius, (int)height/2, (int)width/2)) img << "0 0 0" << endl;
+			else img << "255 255 255" << endl;
 		}
 	}
 }
