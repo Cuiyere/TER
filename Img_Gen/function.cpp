@@ -5,8 +5,6 @@
 	Définition des fonctions de traitement d'image
 */
 
-// Bonjour, je suis Arthur
-
 #include "function.h"
 #include "math.h"
 #include<iostream>
