@@ -5,37 +5,28 @@
 	Programme principal
  */
 
-#include "function.h"
 #include<fstream>
 #include<iostream>
 #include<string>
 
+#include "file.h"
+
 using namespace std;
 
 int main () {
-	const int width = 1023, height = 1023;
-	const int radius;
 
-	// ------ Création du fichier ------
-	string fileName;
-	system("mkdir -p ./Images");
-	cout << "Entrez le nom du fichier:" << endl;
-	cin >> fileName;
-	ofstream img ("./Images/"+fileName+".ppm");
+	system("clear");
 
-	// ------ Syntaxe pour un fichier .ppm ------
-	img << "P3" << endl;
-	img << width << " " << height << endl;
-	img << "255" << endl;
 
-	// ------ Création de l'image ------
-	cout << "Entrez le rayon du cercle:" << endl;
-	cin >> radius;
-	//DrawGradient (img, height, width); // Uncomment to draw a gradient
-	DrawCircle(img, height, width, radius);
+//	system("convert toron.ppm -compress none toron3.ppm") // Implement this later
+	
 
-	// ------ Ouverture de l'image -------
-	string cmd = "open ./Images/"+fileName+".ppm";
-	system(cmd.c_str());
+	Datafile data;
+
+	data.Readfile("Images/toron3.ppm");
+	data.PixelsToImg();
+	data.PixelsToEdges();
+
+
 	return 0;
 }

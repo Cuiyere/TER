@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
 EXEC_NAME = run
-OBJ_FILES = main.o function.o
+OBJ_FILES = main.o function.o file.o
 
 all : $(EXEC_NAME)
 
