@@ -29,10 +29,13 @@ void Datafile::Readfile (const std::string & imgPath) {
 			std::cout << "Empty line" << std::endl;
 		} else if (count >= 3) {
 			std::vector<int> values = SplitLine(line, ' ');
+			std::cout << values.size() << std::endl;
 			for (int i = 0; i < values.size() / 3; i++) {
 				_pixels[row][i] = ( 0.05 * values[3 * i] + 0.90 * values[3 * i + 1] + 0.05 * values[3 * i + 2] );
 			}
 			row++;
+			std::cout << "Line read: " << row-1 << std::endl;
+			std::cout << "Line count in ppm file: " << count << std::endl;
 		} else if (count == 1) {
 			std::vector<int> size = SplitLine(line, ' ');
 			_height = size[0]; _width = size[1];
@@ -53,7 +56,7 @@ void Datafile::Readfile (const std::string & imgPath) {
 void Datafile::PixelsToImg () {
 
 	/* ------ Création du fichier ------ */
-	std::string fileName = "grayscale_toron_059005_" + std::to_string(_width) + "_" + std::to_string(_height);
+	std::string fileName = _filename + "_" + std::to_string(_width) + "_" + std::to_string(_height);
 	system("mkdir -p ./Images");
 	std::ofstream img ("./Images/"+fileName+".ppm");
 
@@ -80,7 +83,7 @@ void Datafile::PixelsToImg () {
 void Datafile::PixelsToEdges () {
 
 	/* ------ Création du fichier ------ */
-	std::string fileName = "edges_toron_059005_" + std::to_string(_width) + "_" + std::to_string(_height);
+	std::string fileName = _filename + "_edges_" + std::to_string(_width) + "_" + std::to_string(_height);
 	system("mkdir -p ./Images");
 	std::ofstream img ("./Images/"+fileName+".ppm");
 
