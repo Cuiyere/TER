@@ -1,8 +1,0 @@
- --- README
- --- 21.10.18
-
-./Img_Gen:
-  Dossier qui contient les fichiers permettant la génération d'image grâce à un code C++.
-  Pour utiliser les fichiers .ppm il suffit de modifier l'extension en .jpeg
-
- -------
