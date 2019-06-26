@@ -11,12 +11,12 @@ Report: [Only in French](abrlr.fr/res/TER1819.pdf)
  * Basic image Processing (Histogram equalisation, Edge detection, Hough Transform for circle detection).
 
 ### /code
-##### What is inside this repository ?
+#### What is inside this repository ?
 The code built to process images of strands in order to model their behaviour using a Finite Element code.
 
 The code in this repository takes a strand image in input, and it outputs a simplified version of it, with only circles.
 
-##### Disclaimer
+#### Disclaimer
 This code is not optimised at all, a lot can be done to make it faster. During the project it was not the number one priority.
 
 Things that can be improved:
@@ -28,7 +28,7 @@ It needs the image magick library installed because the images needs to be conve
 
 
 
-###### How can I use the code ?
+##### How can I use the code ?
 It is pretty straight-forward. The code can be compile by the makefile only.
 ```
 cd path/to/makefile
