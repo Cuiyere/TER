@@ -6,13 +6,9 @@
 Group of 4 people - Implementation in C++ - ~90h\
 Report: [Only in French](abrlr.fr/res/TER1819.pdf)
 
----
-
 ## What I learned with this code
  * Working with images in C++,
  * Basic image Processing (Histogram equalisation, Edge detection, Hough Transform for circle detection).
-
----
 
 ### /code
 ##### What is inside this repository ?
