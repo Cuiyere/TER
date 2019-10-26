@@ -4,7 +4,7 @@
 **Project description:** Modelling of the mechanical behaviour of composite materials from 2D images : study at the strands' scale.
 
 Group of 4 people - Implementation in C++ - ~90h\
-Report: [Only in French](abrlr.fr/res/TER1819.pdf)
+Report: [Only in French](https://www.abrlr.fr/res/TER1819.pdf)
 
 ### What I learned with this code
  * Working with images in C++,
